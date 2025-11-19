@@ -74,18 +74,6 @@ namespace SalesOrderAPI.Infrastructure.Data
                 entity.Property(e => e.TaxAmount).HasColumnType("decimal(18,2)");
                 entity.Property(e => e.InclAmount).HasColumnType("decimal(18,2)");
             });
-
-            // Seed data (sample data)
-            modelBuilder.Entity<Customer>().HasData(
-                new Customer { Id = 1, Name = "John Doe", Address1 = "123 Main St", Suburb = "Springfield", State = "IL", PostCode = "62701", CreatedAt = new DateTime(2024, 1, 1) },
-                new Customer { Id = 2, Name = "Jane Smith", Address1 = "456 Oak Ave", Suburb = "Riverside", State = "CA", PostCode = "92501", CreatedAt = new DateTime(2024, 1, 1) }
-            );
-
-            modelBuilder.Entity<Item>().HasData(
-                new Item { Id = 1, Code = "ITEM001", Description = "Widget A", Price = 10.50m, CreatedAt = new DateTime(2024, 1, 1) },
-                new Item { Id = 2, Code = "ITEM002", Description = "Widget B", Price = 25.00m, CreatedAt = new DateTime(2024, 1, 1) },
-                new Item { Id = 3, Code = "ITEM003", Description = "Gadget C", Price = 15.75m, CreatedAt = new DateTime(2024, 1, 1) }
-            );
         }
     }
 }
